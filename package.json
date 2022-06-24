@@ -1,0 +1,41 @@
+{
+  "name": "tiktok-boost",
+  "version": "1.0.0",
+  "description": "Landing of TikTok Boost",
+  "main": "webpack.config.js",
+  "scripts": {
+    "editorconfig": "editorconfig-checker",
+    "build": "webpack --mode production",
+    "dev": "webpack serve --env development",
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "author": "arni01",
+  "license": "ISC",
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "express": "^4.17.1",
+    "express-https-redirect": "^1.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.52.3",
+    "sass-loader": "^13.0.0",
+    "webpack": "^5.73.0"
+  },
+  "devDependencies": {
+    "editorconfig-checker": "^4.0.2",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "html-loader": "^3.1.2",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "prettier": "^2.7.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  }
+}

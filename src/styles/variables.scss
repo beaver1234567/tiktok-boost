@@ -1,0 +1,21 @@
+:root {
+    --ff: 'Montserrat', sans-serif;
+
+    --clr-body: var(--clr-light-gray-d3);
+
+    --pd-body-top: 40px;
+    --pd-body-left: 156px;
+}
+
+@media screen and (max-width: 1439px) {
+    :root {
+        --pd-body-left: 94px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --pd-body-top: 20px;
+        --pd-body-left: 16px;
+    }
+}

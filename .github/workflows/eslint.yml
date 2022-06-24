@@ -1,0 +1,29 @@
+name: ESLint && Editorconfig
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-varsion: [16.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: npm install
+        run: npm ci
+
+      - name: eslint test
+        run: npm run lint
+
+      - name: editorconfig test
+        run: npm run editorconfig
