@@ -24,4 +24,4 @@ jobs:
         run: ssh-keyscan -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
-        run: rsync -avz --delete -e "ssh"  ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/tiktok-boost-landing/dist/
+        run: rsync -avz --delete -e "ssh"  ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/fantik/dist/
