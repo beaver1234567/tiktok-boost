@@ -51,7 +51,16 @@ module.exports = ({ development }) => ({
     plugins: [
         new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
         new HtmlWebpackPlugin({
+            filename: "index.html",
             template: path.join(__dirname, 'src/index.html'),
+        }),
+        new HtmlWebpackPlugin({
+            filename: "verify.html",
+            template: path.join(__dirname, 'src/verify.html'),
+        }),
+        new HtmlWebpackPlugin({
+            filename: "fail.html",
+            template: path.join(__dirname, 'src/fail.html'),
         }),
         new CopyPlugin({
             patterns: [

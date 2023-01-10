@@ -13,8 +13,21 @@ $colorBG: #111111;
     margin-bottom: 20px;
 }
 
+%medium-title {
+    width: 100%;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 64px;
+    color: $colorTitle;
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 1149px) {
     %title {
+        text-align: center;
+    }
+
+    %medium-title {
         text-align: center;
     }
 }
@@ -22,6 +35,12 @@ $colorBG: #111111;
 @media screen and (max-width: 540px) {
     %title {
         font-size: 34px;
+        line-height: 42px;
+        margin-bottom: 16px;
+    }
+
+    %medium-title {
+        font-size: 28px;
         line-height: 42px;
         margin-bottom: 16px;
     }
@@ -121,6 +140,14 @@ $colorBG: #111111;
     }
 }
 
+.verify_wrapper {
+    @extend .wrapper;
+
+    &::after {
+        background: url(../assets/images/Main.png) no-repeat center;
+    }
+}
+
 .about__activity {
     flex: 1 0 auto;
     max-width: 410px;
@@ -130,6 +157,23 @@ $colorBG: #111111;
 
     &_title {
         @extend %title;
+    }
+
+    &_text {
+        max-width: 300px;
+        margin-bottom: 28px;
+    }
+}
+
+.verify__activity {
+    flex: 1 0 auto;
+    max-width: 410px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+
+    &_title {
+        @extend %medium-title;
     }
 
     &_text {
@@ -160,6 +204,16 @@ $colorBG: #111111;
             text-align: center;
         }
     }
+
+    .verify__activity {
+        max-width: 494px;
+        justify-content: center;
+
+        &_text {
+            align-self: center;
+            text-align: center;
+        }
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -172,6 +226,15 @@ $colorBG: #111111;
 
         &_text {
             margin-bottom: 24px;
+            text-align: center;
+        }
+    }
+
+    .verify__activity {
+        max-width: 345px;
+
+        &_text {
+            argin-bottom: 24px;
             text-align: center;
         }
     }
@@ -213,6 +276,11 @@ $colorBG: #111111;
             &::before {
                 background: url(../assets/images/GooglePlay.svg) no-repeat
                     center;
+            }
+        }
+        &_home {
+            &::before {
+                display: none;
             }
         }
         &_appStore {
